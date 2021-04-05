@@ -56,5 +56,10 @@ let nav6 = document.querySelector("nav a:nth-child(6)")
 nav6.textContent = "Contact"
 
 //------------section 1--------------------
+let h1Text = document.querySelector("h1")
+h1Text.innerHTML = "Dom<br>Is<br>Awesome"
 
+let mainImg = document.querySelector('.cta img')
+mainImg.setAttribute('src', 'img/header-img.png')
 
+document.querySelector('.cta-text button').textContent = "Get Started"
