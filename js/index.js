@@ -40,3 +40,79 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//-------------navigation------------------
+let nav = document.querySelectorAll("nav > a")
+nav[0].textContent = siteContent['nav']['nav-item-1']
+nav[1].textContent = siteContent['nav']['nav-item-2']
+nav[2].textContent = siteContent['nav']['nav-item-3']
+nav[3].textContent = siteContent['nav']['nav-item-4']
+nav[4].textContent = siteContent['nav']['nav-item-5']
+nav[5].textContent = siteContent['nav']['nav-item-6']
+
+
+//------------section 1--------------------
+const h1Text = document.querySelector("h1")
+// h1Text.innerHTML = "Dom<br>Is<br>Awesome"
+h1Text.textContent = siteContent['cta']['h1']
+
+const mainImg = document.querySelector('.cta img')
+mainImg.setAttribute('src', 'img/header-img.png')
+
+document.querySelector('.cta-text button').textContent = "Get Started"
+
+
+//-------------main content----------------
+const midTitles = document.querySelectorAll('.text-content  h4')
+midTitles[0].textContent = siteContent["main-content"]["features-h4"]
+midTitles[1].textContent = siteContent["main-content"]["about-h4"]
+midTitles[2].textContent = siteContent["main-content"]["services-h4"]
+midTitles[3].textContent = siteContent["main-content"]["product-h4"]
+midTitles[4].textContent = siteContent["main-content"]["vision-h4"]
+
+const midText = document.querySelectorAll('.text-content p')
+midText[0].textContent = siteContent["main-content"]["features-content"]
+midText[1].textContent = siteContent["main-content"]["about-content"]
+midText[2].textContent = siteContent["main-content"]["services-content"]
+midText[3].textContent = siteContent["main-content"]["product-content"]
+midText[4].textContent = siteContent["main-content"]["vision-content"]
+
+document.querySelector('.middle-img').setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+//----------------contact-------------------
+
+document.querySelector('.contact h4').textContent = siteContent['contact']['contact-h4']
+
+const contactInfo = document.querySelectorAll('.contact p')
+contactInfo[0].textContent = siteContent['contact']['address']
+contactInfo[1].textContent = siteContent['contact']['phone']
+contactInfo[2].textContent = siteContent['contact']['email']
+
+//-----------------footer--------------------
+document.querySelector('footer p').textContent = siteContent['footer']['copyright']
+
+
+
+//------------------stretch-------------------
+nav[0].style.color = 'green'
+nav[1].style.color = 'green'
+nav[2].style.color = 'green'
+nav[3].style.color = 'green'
+nav[4].style.color = 'green'
+nav[5].style.color = 'green'
+
+
+
+
+const blog = document.createElement('a')
+blog.setAttribute("href", "#")
+document.querySelector('nav').appendChild(blog)
+blog.textContent = 'Blog'
+blog.setAttribute('style', 'color: green')
+
+const home = document.createElement('a')
+home.setAttribute("href", '#')
+document.querySelector('nav').prepend(home)
+home.textContent = "Home"
+home.setAttribute('style', 'color: green')
