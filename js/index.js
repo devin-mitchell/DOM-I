@@ -42,24 +42,52 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //-------------navigation------------------
-let nav1 = document.querySelector("nav a:first-child")
-nav1.textContent = "Services"
-let nav2 = document.querySelector("nav a:nth-child(2)")
-nav2.textContent = "Product"
-let nav3 = document.querySelector("nav a:nth-child(3)")
-nav3.textContent = "Vision"
-let nav4 = document.querySelector("nav a:nth-child(4)")
-nav4.textContent = "Features"
-let nav5 = document.querySelector("nav a:nth-child(5)")
-nav5.textContent = "About"
-let nav6 = document.querySelector("nav a:nth-child(6)")
-nav6.textContent = "Contact"
+let nav = document.querySelectorAll("nav > a")
+nav[0].textContent = siteContent['nav']['nav-item-1']
+nav[1].textContent = siteContent['nav']['nav-item-2']
+nav[2].textContent = siteContent['nav']['nav-item-3']
+nav[3].textContent = siteContent['nav']['nav-item-4']
+nav[4].textContent = siteContent['nav']['nav-item-5']
+nav[5].textContent = siteContent['nav']['nav-item-6']
+
 
 //------------section 1--------------------
-let h1Text = document.querySelector("h1")
-h1Text.innerHTML = "Dom<br>Is<br>Awesome"
+const h1Text = document.querySelector("h1")
+// h1Text.innerHTML = "Dom<br>Is<br>Awesome"
+h1Text.textContent = siteContent['cta']['h1']
 
-let mainImg = document.querySelector('.cta img')
+const mainImg = document.querySelector('.cta img')
 mainImg.setAttribute('src', 'img/header-img.png')
 
 document.querySelector('.cta-text button').textContent = "Get Started"
+
+
+//-------------main content----------------
+const midTitles = document.querySelectorAll('.text-content  h4')
+midTitles[0].textContent = siteContent["main-content"]["features-h4"]
+midTitles[1].textContent = siteContent["main-content"]["about-h4"]
+midTitles[2].textContent = siteContent["main-content"]["services-h4"]
+midTitles[3].textContent = siteContent["main-content"]["product-h4"]
+midTitles[4].textContent = siteContent["main-content"]["vision-h4"]
+
+const midText = document.querySelectorAll('.text-content p')
+midText[0].textContent = siteContent["main-content"]["features-content"]
+midText[1].textContent = siteContent["main-content"]["about-content"]
+midText[2].textContent = siteContent["main-content"]["services-content"]
+midText[3].textContent = siteContent["main-content"]["product-content"]
+midText[4].textContent = siteContent["main-content"]["vision-content"]
+
+document.querySelector('.middle-img').setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+//----------------contact-------------------
+
+document.querySelector('.contact h4').textContent = siteContent['contact']['contact-h4']
+
+const contactInfo = document.querySelectorAll('.contact p')
+contactInfo[0].textContent = siteContent['contact']['address']
+contactInfo[1].textContent = siteContent['contact']['phone']
+contactInfo[2].textContent = siteContent['contact']['email']
+
+//-----------------footer--------------------
+document.querySelector('footer p').textContent = siteContent['footer']['copyright']
