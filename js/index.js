@@ -91,3 +91,28 @@ contactInfo[2].textContent = siteContent['contact']['email']
 
 //-----------------footer--------------------
 document.querySelector('footer p').textContent = siteContent['footer']['copyright']
+
+
+
+//------------------stretch-------------------
+nav[0].style.color = 'green'
+nav[1].style.color = 'green'
+nav[2].style.color = 'green'
+nav[3].style.color = 'green'
+nav[4].style.color = 'green'
+nav[5].style.color = 'green'
+
+
+
+
+const blog = document.createElement('a')
+blog.setAttribute("href", "#")
+document.querySelector('nav').appendChild(blog)
+blog.textContent = 'Blog'
+blog.setAttribute('style', 'color: green')
+
+const home = document.createElement('a')
+home.setAttribute("href", '#')
+document.querySelector('nav').prepend(home)
+home.textContent = "Home"
+home.setAttribute('style', 'color: green')
